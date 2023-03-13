@@ -18,7 +18,9 @@ def start():
         if choice == 5:
             pass
         if choice == 6:
-            pass
+            find = view.find_contact()
+            result = db_manager.find(find)
+            view.show_contacts(result)
         if choice == 7:
             pass
         if choice == 8:

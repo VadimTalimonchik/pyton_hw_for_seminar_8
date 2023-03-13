@@ -35,3 +35,8 @@ def new_contact_input():
                    'phone': phone,
                    'comment': comment}
     return new_contact
+
+
+def find_contact():
+    find = input('Введите искомый элемент: ')
+    return find

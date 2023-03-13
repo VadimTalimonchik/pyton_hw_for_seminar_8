@@ -25,7 +25,7 @@ def save_file():
     with open(path, 'w', encoding='UTF-8') as file:
         file.write(data)
 
-        
+
 def get():
     global phone_book
     return phone_book
@@ -36,4 +36,12 @@ def add(new_contact: dict):
     phone_book.append(new_contact)
 
 
-
+def find(find_option: str):
+    global phone_book
+    all_find = []
+    for contact in phone_book:
+        for element in contact.values():
+            if find_option in element:
+                all_find.append(contact)
+    return all_find
+    
