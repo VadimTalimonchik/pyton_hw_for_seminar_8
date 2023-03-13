@@ -15,11 +15,23 @@ def menu():
     return choice
 
 
-def show_contacts(pb: list[dict]):
+# def show_contacts(pb: list[dict]):
+def show_contacts(pb: dict):
     if pb == []:
         print('Телефонная книга пуста или файл не открыт!')
     else:
-        for i, contact in enumerate(pb):
+        for i, contact in enumerate(pb, 1):
             name = contact.get('name')
             phone = contact.get('phone')
             comment = contact.get('comment')
+            print(f'{i}, {name} {phone} {comment}')
+
+
+def new_contact_input():
+    name = input('Введите фамилию и имя: ')
+    phone = input('Введите номер телефона: ')
+    comment = input('Введите комментарий: ')
+    new_contact = {'name': name,
+                   'phone': phone,
+                   'comment': comment}
+    return new_contact

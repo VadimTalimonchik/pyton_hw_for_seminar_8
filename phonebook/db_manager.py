@@ -18,3 +18,10 @@ def open_file():
 def get():
     global phone_book
     return phone_book
+
+
+def add(new_contact: dict):
+    global phone_book
+    phone_book.append(new_contact)
+
+    

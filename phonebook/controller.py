@@ -1,15 +1,18 @@
 
-from view import menu, show_contacts
-from db_manager import open_file, get
+import db_manager
+import view
 
 def start():
     while True:
-        choice = menu()
+        choice = view.menu()
         if choice == 1:
-            open_file()
+            db_manager.open_file()
         if choice == 3:
             pb = db_manager.get()
-            show_contacts(pb)
+            view.show_contacts(pb)
+        if choice == 4:
+            new = view.new_contact_input
+            db_manager.add(new)
         if choice == 8:
             print('До свидания!')
             break
