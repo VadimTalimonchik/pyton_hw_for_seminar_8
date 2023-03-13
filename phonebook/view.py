@@ -24,7 +24,7 @@ def show_contacts(pb: dict):
             name = contact.get('name')
             phone = contact.get('phone')
             comment = contact.get('comment')
-            print(f'{i}, {name} {phone} {comment}')
+            print(f'{i}. {name} {phone} {comment}')
 
 
 def new_contact_input():

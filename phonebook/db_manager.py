@@ -15,6 +15,17 @@ def open_file():
             phone_book.append(new_contact)
 
 
+def save_file():
+    global phone_book
+    global path
+    data = []
+    for contact in phone_book:
+        data.append(new = ';'.join(contact.values()))
+        data = '\n'.join(data)
+    with open(path, 'w', encoding='UTF-8') as file:
+        file.write(data)
+
+        
 def get():
     global phone_book
     return phone_book
@@ -24,4 +35,5 @@ def add(new_contact: dict):
     global phone_book
     phone_book.append(new_contact)
 
-    
+
+

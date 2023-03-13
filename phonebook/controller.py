@@ -7,6 +7,8 @@ def start():
         choice = view.menu()
         if choice == 1:
             db_manager.open_file()
+        if choice == 2:
+            db_manager.save_file()
         if choice == 3:
             pb = db_manager.get()
             view.show_contacts(pb)
@@ -16,6 +18,8 @@ def start():
         if choice == 8:
             print('До свидания!')
             break
+
+        
         # match choice:
             # case 1:
             #     open_file()
