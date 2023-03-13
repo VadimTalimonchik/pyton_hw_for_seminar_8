@@ -15,6 +15,12 @@ def start():
         if choice == 4:
             new = view.new_contact_input
             db_manager.add(new)
+        if choice == 5:
+            pass
+        if choice == 6:
+            pass
+        if choice == 7:
+            pass
         if choice == 8:
             print('До свидания!')
             break
