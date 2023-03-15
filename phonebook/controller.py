@@ -5,24 +5,41 @@ import view
 def start():
     while True:
         choice = view.menu()
+
         if choice == 1:
             db_manager.open_file()
+
         if choice == 2:
             db_manager.save_file()
+
         if choice == 3:
             pb = db_manager.get()
             view.show_contacts(pb)
+
         if choice == 4:
             new = view.new_contact_input
             db_manager.add(new)
+
         if choice == 5:
-            pass
+            pb = db_manager.get()
+            view.show_contacts(pb)
+            ind = view.imput_id()
+            contact = view.new_contact_input()
+            db_manager.change_contact(ind, contact)
+
         if choice == 6:
             find = view.find_contact()
             result = db_manager.find(find)
             view.show_contacts(result)
+
         if choice == 7:
-            pass
+            pb = db_manager.get()
+            view.show_contacts(pb)
+            ind = view.imput_id()
+            if view.confirm():
+
+                db_manager.delete_contact(ind)
+
         if choice == 8:
             print('До свидания!')
             break

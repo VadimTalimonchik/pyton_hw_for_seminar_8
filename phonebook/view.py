@@ -40,3 +40,15 @@ def new_contact_input():
 def find_contact():
     find = input('Введите искомый элемент: ')
     return find
+
+def imput_id():
+    ind = int(input('Введите индекс: '))
+    return ind
+
+
+def confirm(condition: str, name: str):
+    answer = input(f'Вы действительно хотите {condition} контакт {name}? (y/n)')
+    if answer == 'y':
+        return True
+    else:
+        return False

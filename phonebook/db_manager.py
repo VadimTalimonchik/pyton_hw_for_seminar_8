@@ -44,4 +44,14 @@ def find(find_option: str):
             if find_option in element:
                 all_find.append(contact)
     return all_find
-    
+
+def change_contact(ind: int, contact: dict):
+    global phone_book
+    phone_book.pop(ind - 1)
+    phone_book.insert(ind - 1, contact)
+
+
+def delete_contact(ind: int):
+    global phone_book
+    phone_book.pop(ind - 1)
+
